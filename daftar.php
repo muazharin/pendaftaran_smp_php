@@ -43,11 +43,11 @@
                         <div id="navigation">
                             <ul>
                                 <li class="active"><a href="home.php" title="Beranda">Beranda</a></li>
-                                <li class="has-sub"><a href="#" title="">Pendataran</a>
+                                <li class="has-sub"><a href="#" title="">Pendaftaran</a>
                                     <ul>
                                         <li><a href="daftar.php?menu=daftar" title="Daftar">Daftar</a></li>
                                         <li><a href="daftar.php?menu=lht_pndftr" title="Lihat Pendaftar">Lihat Pendaftar</a></li>
-										<li><a href="#" title="Kirim Pesan">Kirim Pesan</a></li>
+										<li><a href="daftar.php?menu=krm_pesan" title="Kirim Pesan">Kirim Pesan</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -117,8 +117,7 @@
                             $sql="INSERT INTO peserta_pendaftar (nisn, nama, tempat_lahir, tanggal_lahir, jenis_kelamin, agama, anak_ke, jml_saudara, hp_siswa, alamat_siswa, berat_badan, tinggi_badan, gol_darah, asal_sekolah, alamat_sekolah, nama_ayah, nama_ibu, alamat_ortu, hp_ortu, kerja_ayah, kerja_ibu, penghasilan_ortu, tanggungan_anak) VALUES ('$_POST[nisn]', '$_POST[nama]', '$_POST[tmpt_lhir]', '$_POST[tgl_regis]', '$_POST[jenis_kelamin]', '$_POST[agama]', '$_POST[ank_ke]', '$_POST[jml_saudara]', '$_POST[hp_siswa]', '$_POST[almt_siswa]', '$_POST[brt_badan]', '$_POST[tgi_badan]', '$_POST[gol_darah]', '$_POST[asal_sekolah]', '$_POST[almt_sekolah]', '$_POST[nama_ayah]', '$_POST[nama_ibu]', '$_POST[almt_ortu]', '$_POST[hp_ortu]', '$_POST[kerja_ayah]', '$_POST[kerja_ibu]', '$_POST[penghasilan_ortu]', '$_POST[tggungan]')";
                             mysql_query($sql);
                         }
-                    }
-                    if($_GET['menu']=='lht_pndftr'){
+                    }else if($_GET['menu']=='lht_pndftr'){
                         $sql1="SELECT * FROM pendaftaran WHERE menu='lht_pndftr'";
                         $content1=mysql_query($sql1);
                         $data1=mysql_fetch_row($content1);
@@ -137,164 +136,20 @@
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
+                    }else{
+                        if (! @$_POST['singlebutton']) 
+                            @$_POST['singlebutton']='';
+                        $sql="SELECT * FROM pendaftaran WHERE menu='krm_pesan'";
+                        $content=mysql_query($sql);
+                        $data=mysql_fetch_row($content);
+                        echo "$data[1]";
+                        if($_POST['singlebutton']=="Kirim"){
+                            $sql="INSERT INTO pesan_peserta (id_pesan, email, subject, pesan) VALUES (NULL,'$_POST[email]','$_POST[Subject]','$_POST[textarea]')";
+                            mysql_query($sql);
+                        }
                     }
                     
                 ?>
-                <!--div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                    <?php
-                        //if (! @$_POST['singlebutton']) 
-                          //  @$_POST['singlebutton']='';
-                    ?>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h1>Form Pendaftaran</h1>
-                            <p> Please complete the form below. We'll do everything we can to respond to you as quickly as possible.</p>
-                            <form method="post" action="">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="control-label">nisn*</label>
-                                        <input type="text" name="nisn" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label">nama*</label>
-                                        <input type="text" name="nama" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">tempat lahir*</label>
-                                        <input type="text" name="tmpt_lhir" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-										<label class="control-label">jenis kelamin*</label>
-                                        <select class="form-control" name="jenis_kelamin">
-											<option value="Laki-Laki">Laki-Laki</option>
-											<option value="Perempuan">Perempuan</option>
-										</select>
-                                    </div>
-									<div class="col-md-6">
-										<label class="control-label">tanggal lahir*</label>
-										<div class="datepicker-center">
-											<div class="input-group date " data-date="" data-date-format="yyyy-mm-dd">
-								                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-												<input class="form-control" type="text" name="tgl_regis" readonly="readonly">
-											</div>
-										</div>
-									</div>
-									
-									<div class="col-md-6">
-										<label class="control-label">agama*</label>
-                                        <select class="form-control" name="agama">
-											<option value="Islam">Islam</option>
-											<option value="Khatolik">Khatolik</option>
-                                            <option value="Protestan">Protestan</option>
-											<option value="Hindu">Hindu</option>
-											<option value="Budha">Budha</option>
-										</select>
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">anak ke</label>
-                                        <input type="text" name="ank_ke" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">jumlah saudara</label>
-                                        <input type="text" name="jml_saudara" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label">Alamat Siswa*</label>
-                                        <textarea class="form-control" name="almt_siswa" rows="6" placeholder=""></textarea>
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">No. HP Siswa*</label>
-                                        <input type="text" name="hp_siswa" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Berat Badan</label>
-                                        <input type="text" name="brt_badan" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Tinggi Badan</label>
-                                        <input type="text" name="tgi_badan" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-										<label class="control-label">Gol. Darah</label>
-                                        <select class="form-control" name="gol_darah">
-											<option value="A">A</option>
-											<option value="B">B</option>
-											<option value="AB">AB</option>
-											<option value="O">O</option>
-										</select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label">Alamat Sekolah</label>
-                                        <textarea class="form-control" name="almt_sekolah" rows="6" placeholder=""></textarea>
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Asal Sekolah*</label>
-                                        <input type="text" name="asal_sekolah" placeholder="" class="form-control">
-                                    </div>
-									
-									<div class="col-md-6">
-                                        <label class="control-label">Nama Ayah*</label>
-                                        <input type="text" name="nama_ayah" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label">Alamat Orang Tua*</label>
-                                        <textarea class="form-control" name="almt_ortu" rows="6" placeholder=""></textarea>
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Nama Ibu*</label>
-                                        <input type="text" name="nama_ibu" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">No. HP Orang Tua*</label>
-                                        <input type="text" name="hp_ortu" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Pekerjaan Ayah</label>
-                                        <input type="text" name="kerja_ayah" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Pekerjaan Ibu</label>
-                                        <input type="text" name="kerja_ibu" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Penghasilan Orang Tua*</label>
-                                        <input type="text" name="penghasilan_ortu" placeholder="" class="form-control">
-                                    </div>
-									<div class="col-md-6">
-                                        <label class="control-label">Tanggungan Anak</label>
-                                        <input type="text" name="tggungan" placeholder="" class="form-control">
-                                    </div>
-                                    <!--div class="col-md-6">
-                                        <label class="control-label" for="email">email</label>
-                                        <input type="text" name="email" id="email" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="Subject">Subject</label>
-                                        <input type="text" name="Subject" id="Subject" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label class="control-label" for="textarea">Message</label>
-                                            <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder=""></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input name="singlebutton" class="btn btn-default" type="submit" value="Daftar">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <?php
-                                /*include "config.php";
-                                if($_POST['singlebutton']=="Daftar"){
-                                    $sql="INSERT INTO peserta_pendaftar (nisn, nama, tempat_lahir, tanggal_lahir, jenis_kelamin, agama, anak_ke, jml_saudara, hp_siswa, alamat_siswa, berat_badan, tinggi_badan, gol_darah, asal_sekolah, alamat_sekolah, nama_ayah, nama_ibu, alamat_ortu, hp_ortu, kerja_ayah, kerja_ibu, penghasilan_ortu, tanggungan_anak) VALUES ('$_POST[nisn]', '$_POST[nama]', '$_POST[tmpt_lhir]', '$_POST[tgl_regis]', '$_POST[jenis_kelamin]', '$_POST[agama]', '$_POST[ank_ke]', '$_POST[jml_saudara]', '$_POST[hp_siswa]', '$_POST[almt_siswa]', '$_POST[brt_badan]', '$_POST[tgi_badan]', '$_POST[gol_darah]', '$_POST[asal_sekolah]', '$_POST[almt_sekolah]', '$_POST[nama_ayah]', '$_POST[nama_ibu]', '$_POST[almt_ortu]', '$_POST[hp_ortu]', '$_POST[kerja_ayah]', '$_POST[kerja_ibu]', '$_POST[penghasilan_ortu]', '$_POST[tggungan]')";
-                                    mysql_query($sql);
-                                }*/
-                            ?>
-                        </div>
-                    </div>
-                </div-->
             </div>
         </div>
     </div>
