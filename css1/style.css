@@ -19,7 +19,7 @@ body{
 	margin-top: -60px;
 	margin-bottom: 30px;
 }
-input[type="text"]{
+input[type="text"], input[type="password"]{
 	width: 300px;
 	height: 45px;
 	font-size: 18px;
