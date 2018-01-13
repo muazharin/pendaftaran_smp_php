@@ -6,7 +6,7 @@
   	{
       	$user=$_POST['user'];
       	$password=$_POST['password'];
-      	$perintah="SELECT * FROM pendaftar_pdb WHERE username='$user' AND password='$password'";
+      	$perintah="SELECT * FROM user WHERE username='$user' AND password='$password'";
      	$hasil=mysql_query($perintah);
       	$jml_data=mysql_num_rows($hasil);
 	  	if ($jml_data>0)
@@ -20,7 +20,7 @@
 	    ?>
 			<script type="text/javascript" language="JavaScript">
 				alert('Username atau Password yang Anda Masukkan Salah');
-				document.location='login.php';
+				document.location='akun.php';
 			</script>
 		<?php
 		}
