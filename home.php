@@ -37,13 +37,21 @@
                         <div id="navigation">
                             <ul>
                                 <li class="active"><a href="home.php" title="Beranda">Beranda</a></li>
-                                <li class="has-sub"><a href="#" title="">Pendataran</a>
+                                <li class="has-sub"><a href="#" title="">Pendaftaran</a>
                                     <ul>
                                         <li><a href="daftar.php?menu=daftar" title="Daftar">Daftar</a></li>
                                         <li><a href="daftar.php?menu=lht_pndftr" title="Lihat Pendaftar">Lihat Pendaftar</a></li>
-                                        <li><a href="#" title="Kirim Pesan">Kirim Pesan</a></li>
+                                        <li><a href="daftar.php?menu=krm_pesan" title="Kirim Pesan">Kirim Pesan</a></li>
                                     </ul>
                                 </li>
+                                <li class="active"><a href="akun.php" title="Akun">Akun</a></li>
+                                <li class="has-sub"><a href="#" title="">Informasi</a>
+                                    <ul>
+                                        <li><a href="#" title="Pengumuman">Pengumuman</a></li>
+                                        <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="#" title="Bantuan">Bantuan</a></li>
                             </ul>
                         </div>
                     </div>
