@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Pendaftaran SMP</title>
-	<link rel="stylesheet" type="text/css" href="css1/style.css">
+	<link rel="stylesheet" type="text/css" href="css1/style1.css">
 	<link rel="stylesheet" type="text/css" href="css1/font-awesome.css">
 </head>
 <body>
