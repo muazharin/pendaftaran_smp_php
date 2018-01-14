@@ -81,7 +81,11 @@
     <div class="content">
         <div class="container">
             <div class="col-md-offset-2 col-md-8">
-                
+                <button class="btn">Penerimaan Siswa Baru Akan diumumkan pada tanggal 3 Februari 2018</button>
+                <br>
+                <br>
+                <br>
+                <?php /*
                     <div class="row">
                             <h2>Pengumuman Hasil Pendaftaran Siswa Baru </h2><h2>SMP Negeri 2 Raha Tahun 2017/2018</h2>
                             <p> Congratulations to the successful escaped!</p>             
@@ -114,7 +118,7 @@
                                     }?>
                                 </tbody>
                             </table>
-                </div>        
+                </div> */?>       
         </div>
     </div>
     <div class="footer">
