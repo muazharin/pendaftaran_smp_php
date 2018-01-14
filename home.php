@@ -47,7 +47,7 @@
                                 <li class="active"><a href="akun/akun.php" title="Akun">Akun</a></li>
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
-                                        <li><a href="#" title="Pengumuman">Pengumuman</a></li>
+                                        <li><a href="pengumuman.php" title="Pengumuman">Pengumuman</a></li>
                                         <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
