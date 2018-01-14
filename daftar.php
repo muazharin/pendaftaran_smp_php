@@ -31,6 +31,8 @@
     <?php
         if (! @$_GET['menu']) 
             @$_GET['menu']='daftar';
+        if (! @$_POST['singlebutton']) 
+            @$_POST['singlebutton']='';
     ?>
     <div class="header">
         <div class="container">
@@ -53,7 +55,7 @@
                                 <li class="active"><a href="akun/akun.php" title="Akun">Akun</a></li>
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
-                                        <li><a href="#" title="Pengumuman">Pengumuman</a></li>
+                                        <li><a href="pengumuman.php" title="Pengumuman">Pengumuman</a></li>
                                         <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
@@ -118,25 +120,28 @@
                         $sql="SELECT * FROM pendaftaran WHERE menu='daftar'";
                         $content=mysql_query($sql);
                         $data=mysql_fetch_row($content);
-                        if (! @$_POST['singlebutton']) 
-                            @$_POST['singlebutton']='';
+                        
                         echo "$data[1]";
-                        if($_POST['singlebutton']=="Daftar"){
-                            $sql="INSERT INTO peserta_pendaftar (nisn, nama, tempat_lahir, tanggal_lahir, jenis_kelamin, agama, anak_ke, jml_saudara, hp_siswa, alamat_siswa, berat_badan, tinggi_badan, gol_darah, asal_sekolah, alamat_sekolah, nama_ayah, nama_ibu, alamat_ortu, hp_ortu, kerja_ayah, kerja_ibu, penghasilan_ortu, tanggungan_anak) VALUES ('$_POST[nisn]', '$_POST[nama]', '$_POST[tmpt_lhir]', '$_POST[tgl_regis]', '$_POST[jenis_kelamin]', '$_POST[agama]', '$_POST[ank_ke]', '$_POST[jml_saudara]', '$_POST[hp_siswa]', '$_POST[almt_siswa]', '$_POST[brt_badan]', '$_POST[tgi_badan]', '$_POST[gol_darah]', '$_POST[asal_sekolah]', '$_POST[almt_sekolah]', '$_POST[nama_ayah]', '$_POST[nama_ibu]', '$_POST[almt_ortu]', '$_POST[hp_ortu]', '$_POST[kerja_ayah]', '$_POST[kerja_ibu]', '$_POST[penghasilan_ortu]', '$_POST[tggungan]')";
-                            mysql_query($sql);
-                            $sql1="INSERT INTO user (adm_id, username, password, type) VALUES (NULL, '$_POST[nisn]', '$_POST[nisn]', 'siswa')";
-                            mysql_query($sql1);
-                            $sql2="INSERT INTO nilai_ujian_bindo (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
-                            mysql_query($sql2);
-                            $sql3="INSERT INTO nilai_ujian_bing (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
-                            mysql_query($sql3);
-                            $sql4="INSERT INTO nilai_ujian_ipa (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
-                            mysql_query($sql4);
-                            $sql5="INSERT INTO nilai_ujian_ips (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
-                            mysql_query($sql5);
-                            $sql6="INSERT INTO nilai_ujian_mmtk (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
-                            mysql_query($sql6);
-                            echo "<meta http-equiv='refresh' content='0'>";
+                        if($_POST['singlebutton']=="Daftar"){ 
+                            $query="SELECT * FROM peserta_pendaftar WHERE nisn='$a'";
+                            $content1=mysql_query($query);
+                            $cek_nisn = mysql_num_rows($content1);
+                            if($cek_nisn>0){
+                                echo"
+                                    <script type='text/javascript' language='javascript'>
+                                        alert('NISN sudah terdaftar. Silahkan Login ke Menu Akun untuk Mengubah Data');
+                                        window.location.href='daftar.php?menu=daftar';
+                                    </script>";
+                                
+                            }else{
+                                $sql="INSERT INTO peserta_pendaftar (nisn, nama, tempat_lahir, tanggal_lahir, jenis_kelamin, agama, anak_ke, jml_saudara, hp_siswa, alamat_siswa, berat_badan, tinggi_badan, gol_darah, asal_sekolah, alamat_sekolah, nama_ayah, nama_ibu, alamat_ortu, hp_ortu, kerja_ayah, kerja_ibu, penghasilan_ortu, tanggungan_anak, tahun) VALUES ('$_POST[nisn]', '$_POST[nama]', '$_POST[tmpt_lhir]', '$_POST[tgl_regis]', '$_POST[jenis_kelamin]', '$_POST[agama]', '$_POST[ank_ke]', '$_POST[jml_saudara]', '$_POST[hp_siswa]', '$_POST[almt_siswa]', '$_POST[brt_badan]', '$_POST[tgi_badan]', '$_POST[gol_darah]', '$_POST[asal_sekolah]', '$_POST[almt_sekolah]', '$_POST[nama_ayah]', '$_POST[nama_ibu]', '$_POST[almt_ortu]', '$_POST[hp_ortu]', '$_POST[kerja_ayah]', '$_POST[kerja_ibu]', '$_POST[penghasilan_ortu]', '$_POST[tggungan]', '2017')";
+                                mysql_query($sql);
+                                $sql1="INSERT INTO user (adm_id, username, password, type) VALUES (NULL, '$_POST[nisn]', '$_POST[nisn]', 'siswa')";
+                                mysql_query($sql1);
+                                $sql2="INSERT INTO nilai_ijazah (id_ijazah, nisn) VALUES (NULL, '$_POST[nisn])";
+                                mysql_query($sql2);
+                                echo "<meta http-equiv='refresh' content='0'>";    
+                            }
                         }
                     }else if($_GET['menu']=='lht_pndftr'){
                         $sql1="SELECT * FROM pendaftaran WHERE menu='lht_pndftr'";
