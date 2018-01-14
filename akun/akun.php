@@ -47,7 +47,7 @@
                                 <li class="active"><a href="akun.php" title="Akun">Akun</a></li>
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
-                                        <li><a href="#" title="Pengumuman">Pengumuman</a></li>
+                                        <li><a href="../pengumuman.php" title="Pengumuman">Pengumuman</a></li>
                                         <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
@@ -67,7 +67,7 @@
                         <h2 class="page-title">Login</h2>
                         <div class="page-breadcrumb">
                             <ol class="breadcrumb">
-                                <li><a href="home.php">Beranda</a></li>
+                                <li><a href="../home.php">Beranda</a></li>
                                 <li class="active">akun</li>
                             </ol>
                         </div>
