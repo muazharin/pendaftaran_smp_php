@@ -31,6 +31,9 @@
         include "check.php";
         $a=$_SESSION['user'];
         include "limited.php";
+        $query="SELECT * FROM peserta_pendaftar WHERE nisn='$a'";
+        $qwe=mysql_query($query);
+        $dataq=mysql_fetch_row($qwe);
     ?>
     <div class="header">
         <div class="container">
@@ -42,7 +45,7 @@
                       <div class="navigation">
                         <div id="navigation">
                             <ul>
-                                <li class="has-sub"><a href="#" title=""><?php echo $a ?></a>
+                                <li class="has-sub"><a href="#" title=""><?= $dataq[1]; ?></a>
                                     <ul>
                                         <li><a href="logout.php" title="Logout" onclick="return confirm('Apakah anda yakin ingin keluar ?')"> Logout</a></li>
                                     </ul>
