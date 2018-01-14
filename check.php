@@ -1,7 +1,7 @@
 <?php
 //fungsi check.php ini adalah untuk mengecek data user yang ada dalam database agar bisa login ke halaman website.
 	session_start();
-	require_once "config.php";
+	require_once "../config.php";
 	if(ISSET($_POST['user']) && ISSET($_POST['password']))
   	{
       	$user=$_POST['user'];
@@ -14,8 +14,15 @@
 	    	$_SESSION['user']=$user;
 	    	function sesi($user){
 	    		$usr=$user;
-	    	}
-		 	include "home.php";		 
+	    		
+	    	}?>
+	    	<script type="text/javascript" language="JavaScript">
+				alert('Anda Berhasil Masuk');
+			</script>
+			<?php
+			header('location: akun/akun_login.php');
+		 	//include "akun_login.php";		 
+		 	
 	  	}else{
 	    ?>
 			<script type="text/javascript" language="JavaScript">
