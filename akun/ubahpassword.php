@@ -31,6 +31,9 @@
         include "check.php";
         $a=$_SESSION['user'];
         include "limited.php";
+        $query="SELECT * FROM peserta_pendaftar WHERE nisn='$a'";
+        $qwe=mysql_query($query);
+        $dataq=mysql_fetch_row($qwe);
     ?>
     <div class="header">
         <div class="container">
@@ -42,7 +45,7 @@
                       <div class="navigation">
                         <div id="navigation">
                             <ul>
-                                <li class="has-sub"><a href="#" title=""><?php echo $a ?></a>
+                                <li class="has-sub"><a href="#" title=""><?= $dataq[1]; ?></a>
                                     <ul>
                                         <li><a href="logout.php" title="Logout" onclick="return confirm('Apakah anda yakin ingin keluar ?')"> Logout</a></li>
                                     </ul>
@@ -84,8 +87,8 @@
                             if (! @$_POST['singlebutton']) 
                                 @$_POST['singlebutton']='';
                         ?>  
-                        <h1>Nilai Rapor Calon Peserta Didik</h1>
-                        <p> Please complete the form below.</p>
+                        <h1>Edit password</h1>
+                        <p> For secure your account.</p>
                         <form method='post' action=''>
                             <div class='row'>
                                 <div class='col-md-6'>
