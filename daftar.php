@@ -138,7 +138,7 @@
                                 mysql_query($sql);
                                 $sql1="INSERT INTO user (adm_id, username, password, type) VALUES (NULL, '$_POST[nisn]', '$_POST[nisn]', 'siswa')";
                                 mysql_query($sql1);
-                                $sql2="INSERT INTO nilai_ijazah (id_ijazah, nisn) VALUES (NULL, '$_POST[nisn])";
+                                $sql2="INSERT INTO nilai_ijazah (id_ijazah, nisn) VALUES (NULL, '$_POST[nisn])'";
                                 mysql_query($sql2);
                                 echo "<meta http-equiv='refresh' content='0'>";    
                             }
