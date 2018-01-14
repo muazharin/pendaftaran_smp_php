@@ -36,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a href="index.php"><img src="images/logo.png" alt=""></a>
                 </div>
                 <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
                     <div class="navigation">
@@ -50,7 +50,7 @@
 										<li><a href="daftar.php?menu=krm_pesan" title="Kirim Pesan">Kirim Pesan</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="akun.php" title="Akun">Akun</a></li>
+                                <li class="active"><a href="akun/akun.php" title="Akun">Akun</a></li>
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
                                         <li><a href="#" title="Pengumuman">Pengumuman</a></li>
@@ -136,6 +136,7 @@
                             mysql_query($sql5);
                             $sql6="INSERT INTO nilai_ujian_mmtk (id_nilai, nisn, nilai_ujian, nilai_seleksi) VALUES (NULL, '$_POST[nisn]', '', '')";
                             mysql_query($sql6);
+                            echo "<meta http-equiv='refresh' content='0'>";
                         }
                     }else if($_GET['menu']=='lht_pndftr'){
                         $sql1="SELECT * FROM pendaftaran WHERE menu='lht_pndftr'";
@@ -152,6 +153,7 @@
                             echo "<td>$data[1]</td>";
                             echo "<td>$data[13]</td>";
                             echo "</tr>";
+                            $i++;
                         }
                             echo "</tbody>";
                         echo "</table>";
@@ -168,9 +170,9 @@
                         if($_POST['singlebutton']=="Kirim"){
                             $sql="INSERT INTO pesan_peserta (id_pesan, email, subject, pesan) VALUES (NULL,'$_POST[email]','$_POST[Subject]','$_POST[textarea]')";
                             mysql_query($sql);
+                            echo "<meta http-equiv='refresh' content='0'>";
                         }
-                    }
-                    
+                    }   
                 ?>
             </div>
         </div>
