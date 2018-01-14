@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<?php/*
-  error_reporting(0);
-  session_start();
-  $nama=$_SESSION['user'];
-  include "batasan.php";
-  */
+<?php
+  	error_reporting(0);
+  	session_start();
+  	$a=$_SESSION['user'];
+  	include "limited.php";
+  
+  
  ?>
 <html>
 <head>
@@ -56,7 +57,7 @@
 			<li><a href="#"><em class="fa fa-calendar">&nbsp;</em> Transaksi</a></li>
 			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Customer</a></li>
 			<li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> User</a></li>
-			<li><a href="logout.php"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li><a href="logout.php" title="Logout" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 		
@@ -77,7 +78,7 @@
 		</div><!--/.row-->
 		
 		<div class="panel panel-container">
-
+			
 		</div>	
 	<!--/.main-->
 	
