@@ -44,7 +44,7 @@
                                         <li><a href="daftar.php?menu=krm_pesan" title="Kirim Pesan">Kirim Pesan</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="akun.php" title="Akun">Akun</a></li>
+                                <li class="active"><a href="akun/akun.php" title="Akun">Akun</a></li>
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
                                         <li><a href="#" title="Pengumuman">Pengumuman</a></li>
