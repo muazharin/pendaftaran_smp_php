@@ -11,16 +11,36 @@
       	$jml_data=mysql_num_rows($hasil);
 	  	if ($jml_data>0)
 	  	{
+
 	    	$_SESSION['user']=$user;
 	    	function sesi($user){
 	    		$usr=$user;
 	    		
-	    	}?>
-	    	<script type="text/javascript" language="JavaScript">
-				alert('Anda Berhasil Masuk');
-			</script>
-			<?php
-			header('location: editbiodata.php');
+	    	}
+	    	
+			
+			$akun=mysql_fetch_row($hasil);
+			switch ($akun[3]) {
+				case 'admin':
+						?>
+			  			<script type='text/javascript' language='JavaScript'>
+							alert('Anda Berhasil Masuk');
+							window.location.href="menu_admin.php";
+						</script>
+						<?php
+					break;
+				
+				default:
+						?>
+			  			<script type='text/javascript' language='JavaScript'>
+							alert('Anda Berhasil Masuk');
+							window.location.href="editbiodata.php";
+						</script>
+						<?php
+					//header('location: editbiodata.php');
+					break;
+			}
+			
 		 	//include "akun_login.php";		 
 		 	
 	  	}else{
