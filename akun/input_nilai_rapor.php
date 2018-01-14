@@ -31,6 +31,8 @@
         include "check.php";
         $a=$_SESSION['user'];
         include "limited.php";
+        if (! @$_POST['singlebutton']) 
+            @$_POST['singlebutton']='';
     ?>
     <div class="header">
         <div class="container">
@@ -78,26 +80,9 @@
                     <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                         <?php
                             include "../config.php";
-                            $perintah="SELECT * FROM peserta_pendaftar WHERE nisn='$a'";
-                            $hasil=mysql_query($perintah);
-                            $data=mysql_fetch_row($hasil);
-                            if (! @$_POST['singlebutton']) 
-                                @$_POST['singlebutton']='';
-                            $perintah1="SELECT * FROM nilai_ujian_bindo WHERE nisn='$a'";
+                            $perintah1="SELECT * FROM nilai_ijazah WHERE nisn='$a'";
                             $hasil1=mysql_query($perintah1);
                             $data1=mysql_fetch_row($hasil1);
-                            $perintah2="SELECT * FROM nilai_ujian_bing WHERE nisn='$a'";
-                            $hasil2=mysql_query($perintah2);
-                            $data2=mysql_fetch_row($hasil2);
-                            $perintah3="SELECT * FROM nilai_ujian_ipa WHERE nisn='$a'";
-                            $hasil3=mysql_query($perintah3);
-                            $data3=mysql_fetch_row($hasil3);
-                            $perintah4="SELECT * FROM nilai_ujian_ips WHERE nisn='$a'";
-                            $hasil4=mysql_query($perintah4);
-                            $data4=mysql_fetch_row($hasil4);
-                            $perintah5="SELECT * FROM nilai_ujian_mmtk WHERE nisn='$a'";
-                            $hasil5=mysql_query($perintah5);
-                            $data5=mysql_fetch_row($hasil5);
                         ?>  
                         <h1>Nilai Rapor Calon Peserta Didik</h1>
                         <p> Please complete the form below.</p>
@@ -105,17 +90,17 @@
                             <div class='row'>
                                 <div class='col-md-6'>
                                     <label class='control-label'>nisn*</label>
-                                    <h3><?php echo $data[0];?></h3>
+                                    <h3><?php echo $a;?></h3>
                                     <label class='control-label'>nilai ujian bahasa indonesia</label>
                                     <input type='number' name='bindo' placeholder='' class='form-control' required <?php echo "value=$data1[2]";?> >
                                     <label class='control-label'>nilai ujian bahasa inggris</label>
-                                    <input type='number' name='bing' placeholder='' class='form-control' required <?php echo "value=$data2[2]";?> >
+                                    <input type='number' name='bing' placeholder='' class='form-control' required <?php echo "value=$data1[3]";?> >
                                     <label class='control-label'>nilai ujian ipa</label>
-                                    <input type='number' name='ipa' placeholder='' class='form-control' required <?php echo "value=$data3[2]";?> >
+                                    <input type='number' name='ipa' placeholder='' class='form-control' required <?php echo "value=$data1[4]";?> >
                                     <label class='control-label'>nilai ujian ips</label>
-                                    <input type='number' name='ips' placeholder='' class='form-control' required <?php echo "value=$data4[2]";?> >
+                                    <input type='number' name='ips' placeholder='' class='form-control' required <?php echo "value=$data1[5]";?> >
                                     <label class='control-label'>nilai ujian matematika</label>
-                                    <input type='number' name='mmtk' placeholder='' class='form-control' required <?php echo "value=$data5[2]";?> >
+                                    <input type='number' name='mmtk' placeholder='' class='form-control' required <?php echo "value=$data1[6]";?> >
                                 </div>
                                 <div class='col-md-12'>
                                     <div class='form-group'>
@@ -127,16 +112,20 @@
                         <?php
                             include "../config.php";
                             if($_POST['singlebutton']=="Simpan"){
-                                $sql1="UPDATE nilai_ujian_bindo SET nilai_ujian = '$_POST[bindo]' WHERE nisn = '$a';";
-                                mysql_query($sql1);
-                                $sql2="UPDATE nilai_ujian_bing SET nilai_ujian = '$_POST[bing]' WHERE nisn = '$a';";
-                                mysql_query($sql2);
-                                $sql3="UPDATE nilai_ujian_ipa SET nilai_ujian = '$_POST[ipa]' WHERE nisn = '$a';";
-                                mysql_query($sql3);
-                                $sql4="UPDATE nilai_ujian_ips SET nilai_ujian = '$_POST[ips]' WHERE nisn = '$a';";
-                                mysql_query($sql4);
-                                $sql5="UPDATE nilai_ujian_mmtk SET nilai_ujian = '$_POST[mmtk]' WHERE nisn = '$a';";
-                                mysql_query($sql5);
+                                $a1=$_POST[bindo];
+                                $a2=$_POST[bing];
+                                $a3=$_POST[ipa];
+                                $a4=$_POST[ips];
+                                $a5=$_POST[mmtk];
+                                $total=(($a1+$a2+$a3+$a4+$a5)/5);
+                                $ket="";
+                                if($total>=71&&$total<=100)
+                                    $ket="Lulus";
+                                else if($total<=71)
+                                    $ket="Tidak Lulus";
+                                $sql="UPDATE nilai_ijazah SET nilai_ujian_bindo = '$_POST[bindo]', nilai_ujian_bing = '$_POST[bing]', nilai_ujian_ipa = '$_POST[ipa]',nilai_ujian_ips = '$_POST[ips]', nilai_ujian_mmtk = '$_POST[mmtk]', nilai_hasil_akhir='$total', keterangan='$ket' WHERE nisn = '$a';";
+                                mysql_query($sql);
+                                
                                 ?>
                                 	<script type="text/javascript" language="JavaScript">
 										alert('Anda Berhasil Memasukkan Data');
