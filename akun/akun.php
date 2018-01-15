@@ -76,8 +76,8 @@
             </div>
         </div>
     </div><!-- /.page header -->
-    <link rel="stylesheet" type="text/css" href="../css/css1/style1.css">
-    <link rel="stylesheet" type="text/css" href="../css/css1/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/style1.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
     <div class="content">
         <div class="container">
             <div class="col-md-offset-2 col-md-8">
@@ -88,7 +88,7 @@
                 </div>
                     <!-- /.section title start-->
                 <div class="container1">
-                <img src="../images/img/user.png">
+                <img src="../images/user.png">
                     <form action="check.php" method="post"> 
                         <div class="form-input">
                             <input type="text" name="user" placeholder="Enter Username" required="">
