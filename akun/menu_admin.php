@@ -38,7 +38,7 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
-				<img src="../img/user.png" class="img-responsive" alt="">
+				<img src="../images/user.png" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name">Username</div>
@@ -78,7 +78,10 @@
 		</div><!--/.row-->
 		
 		<div class="panel panel-container">
-			
+			<?php
+	        	include "grafik.php";
+	    	?>
+	    	<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>	
 		</div>	
 	<!--/.main-->
 	
