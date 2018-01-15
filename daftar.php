@@ -138,8 +138,13 @@
                                 mysql_query($sql);
                                 $sql1="INSERT INTO user (adm_id, username, password, type) VALUES (NULL, '$_POST[nisn]', '$_POST[nisn]', 'siswa')";
                                 mysql_query($sql1);
-                                $sql2="INSERT INTO nilai_ijazah (id_ijazah, nisn) VALUES (NULL, '$_POST[nisn])'";
+                                $sql2="INSERT INTO nilai_ijazah (id_ijazah, nisn, nilai_ujian_bindo, nilai_ujian_bing, nilai_ujian_ipa, nilai_ujian_ips, nilai_ujian_mmtk, nilai_hasil_akhir, keterangan) VALUES (NULL, '$_POST[nisn]', '', '', '', '', '', '', '');";
                                 mysql_query($sql2);
+                                ?>
+                                <script type='text/javascript' language='JavaScript'>
+                                    alert('Anda Berhasil Daftar. Login ke Menu Akun Untuk Memasukkan Nilai');
+                                </script>
+                                <?php
                                 echo "<meta http-equiv='refresh' content='0'>";    
                             }
                         }
