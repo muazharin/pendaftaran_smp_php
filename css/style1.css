@@ -30,7 +30,7 @@ input[type="text"], input[type="password"]{
 	border-radius: 5px;
 }
 .form-input::before{
-	content: url("../img/usericon.png");
+	content: url("../images/usericon.png");
 	position: absolute;
 	font-family: "FontAwesome";
 	padding-left: 7px;
@@ -40,7 +40,7 @@ input[type="text"], input[type="password"]{
 
 }
 .form-input:nth-child(2)::before{
-	content: url("../img/id.png");
+	content: url("../images/id.png");
 }
 textarea{
 	font-size: 18px;
