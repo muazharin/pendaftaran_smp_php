@@ -51,7 +51,7 @@
                                         <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="#" title="Bantuan">Bantuan</a></li>
+                                <li class="active"><a href="bantuan.php" title="Bantuan">Bantuan</a></li>
                             </ul>
                         </div>
                     </div>
