@@ -54,9 +54,9 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="menu_admin.php"><em class="fa fa-dashboard">&nbsp;</em> Data Pendaftar</a></li>
-			<li><a href="#"><em class="fa fa-calendar">&nbsp;</em> Transaksi</a></li>
+			<li><a href="pengaturan_lulus.php"><em class="fa fa-calendar">&nbsp;</em> Kelululsan</a></li>
 			<li><a href="#"><em class="fa fa-bar-chart">&nbsp;</em> Customer</a></li>
-			<li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> User</a></li>
+			<li><a href="admin_user.php"><em class="fa fa-toggle-off">&nbsp;</em> User</a></li>
 			<li><a href="logout.php" title="Logout" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
