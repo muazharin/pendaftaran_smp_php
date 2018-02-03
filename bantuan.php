@@ -48,7 +48,6 @@
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
                                         <li><a href="pengumuman.php" title="Pengumuman">Pengumuman</a></li>
-                                        <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="bantuan.php" title="Bantuan">Bantuan</a></li>
@@ -67,7 +66,7 @@
                         <h2 class="page-title">Bantuan</h2>
                         <div class="page-breadcrumb">
                             <ol class="breadcrumb">
-                                <li><a href="index.php">Home</a></li>
+                                <li><a href="index.php">Beranda</a></li>
                                 <li class="active">Bantuan</li>
                             </ol>
                         </div>
@@ -105,72 +104,11 @@
                                     <p>1. Bagi adik-adik calon siswa(i) baru SMP Negeri 2 Raha diharuskan untuk login ke menu Akun agar dapat memasukkan data diri serta nilai-nilai ujian ke dalam sistem kami. Namun, sebelum itu pastikan setiap calon siswa(i) telah mendaftarkan diri terlebih dahulu di halaman Pendaftaran untuk mendapatkan username dan password.</p><img src="images/mamta6.png" class="alignleft img-responsive" alt="">
                                     <p>2. Setelah mendaftarkan diri dengan mengisi biodata pada form pendaftaran. Langkah selanjutnya calon siswa(i) login ke menu Akun. <br>Untuk username dan password secara default diisi dengan NISN dari masing-masing calon siswa(i).</p><br><img src="images/xxx.png" class="alignright img-responsive" alt="">
                                     <p>3. Jika berhasil masuk, calon siswa(i) baru SMP Negeri 2 Raha akan diberikan 3 pilihan. Pertama yaitu <b>Biodata</b>. Pada laman ini Anda dapat mengubah kembali data pribadi Anda jika ada kesalahan pada penginputan awal. Kedua yaitu <b>Input Nilai Rapor</b>. Pada laman ini Anda diharuskan untuk memasukkan nilai ujian sebelumnya sesuai dengan yang tertera pada SKHU / Ijazah. Untuk itu Anda wajib mengumpulkan fotocopy SKHU/Ijazah ke panitia pendaftaran di SMP Negeri 2 Raha. Agar dapat dilakukan validasi data inputan dengan data yang dikumpulkan. Dan jika terjadi kesengajaan perubahan nilai pada saat penginputan, maka calon siswa(i) akan langsung dihapuskan namanya dari peserta calon siswa(i) SMP Negeri 2 Raha. Ketiga yaitu <b>Ubah Password</b>. Pada laman ini Anda dapat mengubah password akun Anda untuk mencegah adanya penggunaan akun secara illegal.</p>
-                                    <p>Praesent vel aliquet urnaauris molestie sollicitudin nisl non volutpatm mollis eros lacusac lorem tristique arcu facilisis sedamus ullamcorper accumsan augue quis egestas.</p>
+                                    
                                     <div class="related-post-block">
-                                        <!-- related post block -->
-                                        <div class="row">
-                                            <div class="col-lg-12 col-sm-12 col-md-12 col-sm-12">
-                                                <h2 class="related-post-title">Related Post</h2>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                                                <div class="related-post">
-                                                    <!-- related post -->
-                                                    <div class="related-post-img">
-                                                        <a href="#"><img src="images/related-post.jpg" alt="" class="img-responsive"></a>
-                                                    </div>
-                                                    <div class="related-post-content">
-                                                        <h3 class="related-title"><a href="#" class="title">Free Hair Salon Website Templates Download</a></h3>
-                                                        <div class="post-meta"><span class="meta-cat">in <a href="#" class="">"Free Website Template"</a> </span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- /.related post -->
-                                            </div>
-                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                                                <div class="related-post">
-                                                    <!-- related post -->
-                                                    <div class="related-post-img">
-                                                        <a href="#"><img src="images/related-post-1.jpg" alt="" class="img-responsive"></a>
-                                                    </div>
-                                                    <div class="related-post-content">
-                                                        <h3 class="related-title"><a href="#" class="title">HTML5 Website Design Template</a></h3>
-                                                        <div class="post-meta"><span class="meta-cat">in <a href="#" class="">"Free Bootstrap Website Template"</a> </span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- /.related post -->
-                                            </div>
-                                        </div>
+                                       
                                     </div>
-                                    <!-- /.related post block -->
-                                    <div class="post-navigation">
-                                        <!-- post navigation -->
-                                        <div class="row">
-                                            <div class="nav-links">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="nav-previous">
-                                                        <!-- nav previous -->
-                                                        <a href="#" class="prev-link">previous post</a>
-                                                        <div class="prev-post">
-                                                            <h3><a href="#" class="title">Praesent Nonaugue Lacuisque Nemetu</a></h3>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /. nav previous -->
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="nav-next text-right">
-                                                        <!-- nav next -->
-                                                        <a href="#" class="next-link">next post</a>
-                                                        <div class="next-post">
-                                                            <h3><a href="#" class="title">Maecenas Finibus Ultrices Sleger</a></h3>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.nav previous -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /. post navigation -->
+                                    
                                     <div class="author-post">
                                         <!-- Post author -->
                                         <div class="row">
@@ -185,149 +123,28 @@
                                                         <h3><a href="#" class="title">Muazharin Alfan</a></h3>
                                                     </div>
                                                     <div class="author-content">
-                                                        <p>Tak harus pintar untuk menjadi hebat. Karena kehebatan tidak banyak dimiliki oleh orang pintar.</p>
-                                                        <a href="#" class="btn btn-default">View All Post</a> </div>
+                                                        <p><strong>Education</strong> is the most powerful weapon which you can use to change the world.<br>~Nelson Mandela.</p>
+                                                        <a href="https://facebook.com/muazharinalfan" class="btn btn-default">View More</a> </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- /.post author -->
-                                    <div class="comments-area">
-                                        <h2 class="comments-title">04 Comments</h2>
-                                        <ul class="comment-list">
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="comment-author"><img src="images/user-pic-1.jpg" alt="" class="img-circle"> </div>
-                                                    <div class="comment-info">
-                                                        <div class="comment-header">
-                                                            <div class="comment-meta"><span class="comment-meta-date pull-right">25 February, 2020 </span></div>
-                                                            <h4 class="user-title">Willy Smith</h4>
-                                                        </div>
-                                                        <div class="comment-content">
-                                                            <p>Laoreet sitamet purus sed vestibulu ullam cursus, lacus eget pharetra accumsan ante metus psumet efficitur elit.</p>
-                                                        </div>
-                                                        <div class="reply"><a href="#" class="btn-link">Reply</a></div>
-                                                    </div>
-                                                </div>
-                                                <ul class="childern">
-                                                    <li class="comment">
-                                                        <div class="comment-body">
-                                                            <div class="">
-                                                                <div class="comment-author"><img src="images/user-pic-2.jpg" alt="" class="img-circle"> </div>
-                                                                <div class="comment-info">
-                                                                    <div class="comment-header">
-                                                                        <div class="comment-meta"><span class="comment-meta-date pull-right">25 February, 2020 </span></div>
-                                                                        <h4 class="user-title">Cryst Jones</h4>
-                                                                    </div>
-                                                                    <div class="comment-content">
-                                                                        <p>Getub reet sitamet purus sed vestibulu ullam cursus, lacus eget pharetra accumsan anteme psumet.</p>
-                                                                    </div>
-                                                                    <div class="reply"><a href="#" class="btn-link">Reply</a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul class="comment-list">
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="">
-                                                        <div class="comment-author"><img src="images/user-pic-3.jpg" alt="" class="img-circle"> </div>
-                                                        <div class="comment-info">
-                                                            <div class="comment-header">
-                                                                <div class="comment-meta"><span class="comment-meta-date pull-right">24 February, 2020 </span></div>
-                                                                <h4 class="user-title">Rosario Scott</h4>
-                                                            </div>
-                                                            <div class="comment-content">
-                                                                <p>Laoreet sitamet purus sed vestibulu ullam cursus, lacus eget pharetra accumsan ante metus psumet efficitur elit.</p>
-                                                            </div>
-                                                            <div class="reply"><a href="#" class="btn-link">Reply</a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="comment-list">
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="">
-                                                        <div class="comment-author"><img src="images/user-pic-4.jpg" alt="" class="img-circle"> </div>
-                                                        <div class="comment-info">
-                                                            <div class="comment-header">
-                                                                <div class="comment-meta"><span class="comment-meta-date pull-right">24 February, 2020 </span></div>
-                                                                <h4 class="user-title mb10">Susan White</h4>
-                                                            </div>
-                                                            <div class="comment-content">
-                                                                <p>Sed mattis sem leoat sollicitudin nulla egestas acstibulum ante ipsum primis in faucibus orci luctus.</p>
-                                                            </div>
-                                                            <div class="reply"><a href="#" class="btn-link">Reply</a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="leave-comments">
-                                    <h2 class="reply-title">Leave a Reply</h2>
-                                    <form class="reply-form">
-                                        <div class="row">
-                                            <!-- Textarea -->
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <label class="control-label" for="textarea">Comments</label>
-                                                    <textarea class="form-control" id="textarea" name="textarea" rows="6"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <!-- Text input-->
-                                                <div class="form-group">
-                                                    <label class="control-label" for="name">Name</label>
-                                                    <span class="required">*</span>
-                                                    <input id="name" name="name" type="text" class="form-control" required="">
-                                                </div>
-                                            </div>
-                                            <!-- Text input-->
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="email">E-mail</label>
-                                                    <span class="required">*</span>
-                                                    <input id="email" name="email" type="email" class="form-control" required="">
-                                                </div>
-                                            </div>
-                                            <!-- Text input-->
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="Website">Website</label>
-                                                    <span class="required">*</span>
-                                                    <input id="Website" name="Website" type="text" class="form-control" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <!-- Button -->
-                                                <div class="form-group">
-                                                    <button id="singlebutton" name="singlebutton" class="btn btn-default">Leave A Comment</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <!-- /.post author -->  
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="widget widget-search">
-                        <!-- widget search -->
+                    <!--div class="widget widget-search">
+                        <!-- widget search >
                         <form>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search Here" aria-describedby="basic-addon2">
                                 <span class="input-group-addon" id="basic-addon2">
                                 <i class="fa fa-search"></i></span>
                             </div>
-                            <!-- /input-group -->
+                            <!-- /input-group >
                         </form>
                     </div>
                     <!-- /.widget search -->
@@ -342,84 +159,6 @@
                             <li><a href="https://easetemplate.com/downloads/yoga-studio-yoga-website-template-free/">Yoga Website Template</a></li>
                         </ul>
                     </div>
-                    <!-- /.widget categories -->
-                    <!-- widget start -->
-                    <div class="widget widget-recent-post">
-                        <!-- widget recent post -->
-                        <h3 class="widget-title"> Recent Post </h3>
-                        <ul class="listnone widget-recent-post">
-                            <li>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <div class="recent-post-img">
-                                            <a href="#"><img src="images/recent-post-img.jpg" alt=""></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="recent-post-content">
-                                            <h4 class="recent-title"><a href="#" class="title">bootstrap responsive design templates free download</a></h4>
-                                            <div class="meta"><span class="meta-date">22 Jan, 2020</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <div class="recent-post-img">
-                                            <a href="#"><img src="images/recent-post-img-1.jpg" alt=""></a>
-                                        </div>
-                                    </div>
-                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="recent-post-content">
-                                            <h4 class="recent-title"><a href="#" class="title">Free Responsive HTML5 CSS3 Website Templates</a></h4>
-                                            <div class="meta"><span class="meta-date">22 Jan, 2020</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <div class="recent-post-img">
-                                            <a href="#"><img src="images/recent-post-img-2.jpg" alt=""></a>
-                                        </div>
-                                    </div>
-                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                        <div class="recent-post-content">
-                                            <h4 class="recent-title"><a href="#" class="title">website design templates free download</a></h4>
-                                            <div class="meta"><span class="meta-date">22 Jan, 2020</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.widget recent post -->
-                    <div class="widget widget-archives">
-                        <!-- widget archives -->
-                        <h3 class="widget-title"> Archives </h3>
-                        <ul class="listnone">
-                            <li><a href="#">08 Mar, 2020</a></li>
-                            <li><a href="#">11 Feb, 2020</a></li>
-                            <li><a href="#">22 Jan, 2020</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget archives -->
-                    <div class="widget widget-tags">
-                        <!-- widget tags -->
-                        <h2 class="widget-title"> Tags </h2>
-                        <a href="#">HTML5</a>
-                        <a href="#">Bootstrap</a>
-                        <a href="#">Website Design</a>
-                        <a href="#">Free Website Design</a>
-                        <a href="#">HTML5 Templates</a>
-                        <a href="#">Free Website Templates</a>
-                    </div>
-                    <!-- /.widget tags -->
                 </div>
             </div>
         </div>
@@ -432,7 +171,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="footer-widget">
-                            <h2 class="widget-title">Salon Address</h2>
+                            <h2 class="widget-title">SMP Negeri 2 Raha</h2>
                             <ul class="listnone contact">
                                 <li><i class="fa fa-map-marker"></i> 4958 Norman Street Los Angeles, CA 90042 </li>
                                 <li><i class="fa fa-phone"></i> +00 (800) 123-4567</li>
