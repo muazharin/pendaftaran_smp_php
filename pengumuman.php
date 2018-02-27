@@ -48,7 +48,6 @@
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
                                         <li><a href="pengumuman.php" title="Pengumuman">Pengumuman</a></li>
-                                        <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="bantuan.php" title="Bantuan">Bantuan</a></li>
@@ -81,11 +80,11 @@
     <div class="content">
         <div class="container">
             <div class="col-md-offset-2 col-md-8">
-                <button class="btn">Penerimaan Siswa Baru Akan diumumkan pada tanggal 3 Februari 2018</button>
+                <!--button class="btn">Penerimaan Siswa Baru Akan diumumkan pada tanggal 3 Februari 2018</button>
                 <br>
                 <br>
-                <br>
-                <?php /*
+                <br-->
+                
                     <div class="row">
                             <h2>Pengumuman Hasil Pendaftaran Siswa Baru </h2><h2>SMP Negeri 2 Raha Tahun 2017/2018</h2>
                             <p> Congratulations to the successful escaped!</p>             
@@ -103,7 +102,7 @@
                                     <tbody>
                                     <?php
                                     include "config.php";
-                                    $sql="SELECT ni.nisn, ppn.nama, ni.nilai_hasil_akhir, ni.Keterangan FROM nilai_ijazah ni, peserta_pendaftar ppn WHERE ni.nisn=ppn.nisn GROUP BY ppn.nama";
+                                    $sql="SELECT ni.nisn, ppn.nama, ni.nilai_hasil_akhir, ni.Keterangan FROM nilai_ijazah ni, peserta_pendaftar ppn WHERE ni.nisn=ppn.nisn AND ppn.tahun='2017' GROUP BY ppn.nama";
                                     $content=mysql_query($sql);
                                     $i=1;
                                     while ($data=mysql_fetch_row($content)) {
@@ -118,7 +117,7 @@
                                     }?>
                                 </tbody>
                             </table>
-                </div> */?>
+                </div> 
         </div>
     </div>
     <div class="footer">
@@ -129,7 +128,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="footer-widget">
-                            <h2 class="widget-title">Salon Address</h2>
+                            <h2 class="widget-title">SMP Negeri 2 Raha</h2>
                             <ul class="listnone contact">
                                 <li><i class="fa fa-map-marker"></i> 4958 Norman Street Los Angeles, CA 90042 </li>
                                 <li><i class="fa fa-phone"></i> +00 (800) 123-4567</li>

@@ -48,7 +48,6 @@
                                 <li class="has-sub"><a href="#" title="">Informasi</a>
                                     <ul>
                                         <li><a href="pengumuman.php" title="Pengumuman">Pengumuman</a></li>
-                                        <li><a href="#" title="Tentang Sekolah">Tentang Sekolah</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="bantuan.php" title="Bantuan">Bantuan</a></li>
@@ -65,7 +64,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h1 class="hero-title">Website resmi SMP Negeri 2 Raha</h1>
                     <p class="hero-text"><strong>Selamat datang di website kami</strong> </p>
-                    <a href="#" class="btn btn-default">Selengkapnya</a> </div>
+                    
             </div>
         </div>
     </div>

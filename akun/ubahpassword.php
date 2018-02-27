@@ -142,6 +142,7 @@
                         ?>
                     </div>
                 </div>
+                
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="sidenav">
@@ -157,6 +158,7 @@
                         <a href="#" class="btn btn-primary btn-lg">Make Appointment</a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

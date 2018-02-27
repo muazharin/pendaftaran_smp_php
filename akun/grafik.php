@@ -66,18 +66,18 @@
 					"dataProvider": [
 						{
 							"category": "2015",
-							"column-1": 322,
-							"column-2": 350
+							"column-1": 9,
+							"column-2": 21
 						},
 						{
 							"category": "2016",
-							"column-1": 311,
-							"column-2": 341
+							"column-1": 13,
+							"column-2": 23
 						},
 						{
 							"category": "2017",
-							"column-1": 333,
-							"column-2": 387
+							"column-1": 17,
+							"column-2": 40
 						}
 					]
 				}
